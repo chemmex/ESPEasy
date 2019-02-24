@@ -41,14 +41,14 @@
 #define DEFAULT_WIFI_RESTART_WIFI_CONN_LOST  false // Perform wifi off and on when connection was lost.
 
 // --- Default Controller ------------------------------------------------------------------------------
-#define DEFAULT_CONTROLLER   false              // true or false enabled or disabled, set 1st controller defaults
+#define DEFAULT_CONTROLLER   true              // true or false enabled or disabled, set 1st controller defaults
 // using a default template, you also need to set a DEFAULT PROTOCOL to a suitable MQTT protocol !
 #define DEFAULT_PUB         "sensors/espeasy/%sysname%/%tskname%/%valname%" // Enter your pub
 #define DEFAULT_SUB         "sensors/espeasy/%sysname%/#" // Enter your sub
 #define DEFAULT_SERVER      "192.168.0.8"       // Enter your Server IP address
 #define DEFAULT_PORT        8080                // Enter your Server port value
 
-#define DEFAULT_PROTOCOL    0                   // Protocol used for controller communications
+#define DEFAULT_PROTOCOL    5                   // Protocol used for controller communications
 //   0 = Stand-alone (no controller set)
 //   1 = Domoticz HTTP
 //   2 = Domoticz MQTT
