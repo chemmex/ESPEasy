@@ -47,6 +47,29 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
   #define NR_ESPEASY_SERIAL_TYPES 3 // Serial 0, 1, 0_swap
 #endif
 
+#ifndef ESP32
+  #if defined(ARDUINO_ESP8266_RELEASE_2_4_0) || defined(ARDUINO_ESP8266_RELEASE_2_4_1)  || defined(ARDUINO_ESP8266_RELEASE_2_4_2)
+    #ifndef CORE_2_4_X
+      #define CORE_2_4_X
+    #endif
+  #endif
+
+  #if defined(ARDUINO_ESP8266_RELEASE_2_3_0) || defined(ARDUINO_ESP8266_RELEASE_2_4_0) || defined(ARDUINO_ESP8266_RELEASE_2_4_1)
+    #ifndef CORE_PRE_2_4_2
+      #define CORE_PRE_2_4_2
+    #endif
+  #endif
+
+  #if defined(ARDUINO_ESP8266_RELEASE_2_3_0) || defined(CORE_2_4_X)
+    #ifndef CORE_PRE_2_5_0
+      #define CORE_PRE_2_5_0
+    #endif
+  #else
+    #ifndef CORE_POST_2_5_0
+      #define CORE_POST_2_5_0
+    #endif
+  #endif
+#endif // ESP32
 
 struct ESPeasySerialType {
   enum serialtype {
@@ -194,9 +217,7 @@ public:
   void setDebugOutput(bool);
   bool isTxEnabled(void);
   bool isRxEnabled(void);
-#ifdef CORE_2_5_0
   bool hasRxError(void);
-#endif // CORE_2_5_0
 
   void startDetectBaudrate();
   unsigned long testBaudrate();
@@ -211,6 +232,8 @@ public:
   bool serial0_swap_active() const { return _serial0_swap_active; }
 #endif
   bool listen();
+
+  String getLogString() const;
 
 
   using Print::write;
@@ -230,6 +253,8 @@ private:
   bool isSWserial() const { return _serialtype == ESPeasySerialType::serialtype::software; }
 
   ESPeasySoftwareSerial* _swserial = nullptr;
+#else
+  bool isSWserial() const { return false; }
 #endif
 #ifdef ESP8266
   static bool _serial0_swap_active;
