@@ -1,8 +1,3 @@
-|Latest Nightly  | Build Status | Docs | Patreon | Ko-Fi | PayPal |
-|-------|-------|-------|-------|-------|-------|
-| [![GitHub version](https://img.shields.io/github/release/letscontrolit/ESPEasy/all.svg)](https://github.com/letscontrolit/ESPEasy/releases/latest) | [![Build Status](https://travis-ci.org/letscontrolit/ESPEasy.svg?branch=mega)](https://travis-ci.org/letscontrolit/ESPEasy) | [![Documentation Status](https://readthedocs.org/projects/espeasy/badge/?version=latest)](https://espeasy.readthedocs.io/en/latest/?badge=latest) | [![donate](https://img.shields.io/badge/donate-Patreon-blue.svg)](https://www.patreon.com/GrovkillenTDer) | [![donate](https://img.shields.io/badge/donate-KoFi-blue.svg)](https://ko-fi.com/grovkillentder) | [![donate](https://img.shields.io/badge/donate-PayPal-blue.svg)](https://www.paypal.me/espeasy) |
-
-For ways to *support* us, see [this announcement on the forum](https://www.letscontrolit.com/forum/viewtopic.php?f=14&t=5787), or have a look at the [Patreon](https://www.patreon.com/GrovkillenTDer), [Ko-Fi](https://ko-fi.com/grovkillentder) or [PayPal](https://www.paypal.me/espeasy) links above.
 
 # ESPEasy (development branch)
 
@@ -12,6 +7,7 @@ Introduction and wiki: https://www.letscontrolit.com/wiki/index.php/ESPEasy#Intr
 **MEGA**
 :warning:This is the development branch of ESPEasy. All new untested features go into this branch. If you want to do a bugfix, do it on the stable branch, we will merge the fix to the development branch as well.:warning:
 
+<<<<<<< HEAD
 
 Check here to learn how to use this branch and help us improving ESPEasy: http://www.letscontrolit.com/wiki/index.php/ESPEasy#Source_code_development
 
@@ -36,6 +32,8 @@ ESPEasy_mega-20190225_normal_ESP8285_1M.bin  | ESP8285 with 1MB flash  | Stable 
 ESPEasy_mega-20190225_test_ESP8285_1M.bin    | ESP8285 with 1MB flash  | Stable + Test               |
 ESPEasy_mega-20190225_dev_ESP8285_1M.bin     | ESP8285 with 1MB flash  | Stable + Test + Development |
 
+=======
+>>>>>>> a07881b24f286c89b0c46bf4858c26a9515df494
 ## More info
 
 Details and discussion are on the "Experimental" section of the forum: https://www.letscontrolit.com/forum/viewforum.php?f=18
