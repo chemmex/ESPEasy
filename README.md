@@ -1,4 +1,3 @@
-|Latest Nightly  | Build Status | Docs | Patreon | Ko-Fi | PayPal |
 
 # ESPEasy (development branch)
 
